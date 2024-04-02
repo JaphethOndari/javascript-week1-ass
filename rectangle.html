@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Formstyling.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form styling</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body{
+            background-color: rgb(213, 185, 148);
+            /* background-image: url(pic2.jpg); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            width: 500px;
+            height: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            align-items: center;
+            
+        }
+        input{
+            width: 100%;
+            height: 30px;
+            margin-bottom: 10px;
+            border: none;
+            border-bottom: 1px solid grey;
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: brown;
+            color: white;
+            font-size: larger;
+            border: white 1px;
+            border-radius: 10px;
+        }
+        button{
+            background-color: rgb(255, 6, 6);
+            padding: 10px;
+            border-radius: 5px;
+
+        }
+        
+    </style>
+</head>
+<body>
+ 
+    <form>
+        <h1 style="text-align: center;"> Find The Area Of Your Rectangle</h1>
+
+        <hr style="margin-bottom: 10px;"></style>
+
+        <label> length</label><br>
+        <input type="number" placeholder="Enter your length" id="length"><BR>
+            <label>width</label><BR>
+            <input type="number" placeholder="enter width" id="width"><BR>
+
+                <button onclick="area()">Get Area</button>
+                <button onclick="perimeter()">Get Perimeter</button>
+                <button onclick="both()">Get Both</button>
+
+    </form>
+    <script>
+        function area(){
+            let length= parseFloat(document.getElementById("length").value);
+            let width= parseFloat(document.getElementById("width").value);
+
+            let area = length*width
+
+            alert("The area of your rectangle is " + area)
+        }
+        function perimeter(){
+            let length= parseFloat(document.getElementById("length").value);
+            let width= parseFloat(document.getElementById("width").value);
+
+            let perimeter = (length+width)*2
+
+            alert("The perimeter of your rectangle is " + perimeter)
+        }
+        function both(){
+            let length= parseFloat(document.getElementById("length").value);
+            let width= parseFloat(document.getElementById("width").value);
+
+            let area = length*width
+            let perimeter = (length+width)*2
+
+            alert("The perimeter of your rectangle is " + perimeter)
+            alert("The area of your rectangle is " + area)
+
+        }
+    </script>
+</body>
+</html>
